@@ -86,39 +86,30 @@ else:
     window = Tk()
     window.title("Password Manager")
     window.config(padx=30, pady=30)
-
-canvas = Canvas(width=200, height=200)
-img = PhotoImage(file="logo.png")
-canvas.create_image(100, 100, image=img)
-canvas.grid(column=1, row=0)
-
-#labels
-website_label = Label(text="Website:")
-website_label.grid(column=0, row=1)
-email_label = Label(text="Email/Username:")
-email_label.grid(column=0, row=2)
-password_label = Label(text="Password:")
-password_label.grid(column=0, row=3)
-
-
-#Entries
-website_text = Entry(width=21)
-website_text.focus()
-website_text.grid(column=1, row=1)
-
-email_text = Entry(width=40)
-email_text.grid(column=1, row=2, columnspan=2)
-
-password_text = Entry(width=21)
-password_text.grid(column=1, row=3)
-
-
-#Buttons
-password_button = Button(text="Generate Password", command=generate_password, width=15)
-password_button.grid(column=2, row=3)
-add_button = Button(text="Add", width=35, command=add)
-add_button.grid(column=1, row=4, columnspan=2)
-search_button = Button(text="Search", command=find_password, width=15)
-search_button.grid(column=2, row=1)
-
-window.mainloop()
+    canvas = Canvas(width=200, height=200)
+    img = PhotoImage(file="logo.png")
+    canvas.create_image(100, 100, image=img)
+    canvas.grid(column=1, row=0)
+    #labels
+    website_label = Label(text="Website:")
+    website_label.grid(column=0, row=1)
+    email_label = Label(text="Email/Username:")
+    email_label.grid(column=0, row=2)
+    password_label = Label(text="Password:")
+    password_label.grid(column=0, row=3)
+    #Entries
+    website_text = Entry(width=21)
+    website_text.focus()
+    website_text.grid(column=1, row=1)
+    email_text = Entry(width=40)
+    email_text.grid(column=1, row=2, columnspan=2)
+    password_text = Entry(width=21)
+    password_text.grid(column=1, row=3)
+    #Buttons
+    password_button = Button(text="Generate Password", command=generate_password, width=15)
+    password_button.grid(column=2, row=3)
+    add_button = Button(text="Add", width=35, command=add)
+    add_button.grid(column=1, row=4, columnspan=2)
+    search_button = Button(text="Search", command=find_password, width=15)
+    search_button.grid(column=2, row=1)
+    window.mainloop()
